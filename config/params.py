@@ -1,6 +1,6 @@
 params = {
     "other_eligibility_criteria": "",
-    "run_name": "aib-rct1-default-with-oss-open-model",
+    "run_name": "",
     "N": 500,
     "random_seed": 42,
     "use_census_data": False,
