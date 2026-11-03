@@ -1,0 +1,11 @@
+pandas
+openai
+python-dotenv
+foundry-platform-sdk
+statsmodels
+streamlit
+plotly
+faker
+unidecode
+scikit-learn
+PyArabic

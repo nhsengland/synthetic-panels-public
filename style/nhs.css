@@ -1,0 +1,198 @@
+/* NHS Design System colours and typography */
+
+/* Import NHS-like font stack (Frutiger not freely available, use Arial as NHS fallback) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --nhs-blue: #005EB8;
+    --nhs-dark-blue: #003087;
+    --nhs-bright-blue: #0072CE;
+    --nhs-light-blue: #41B6E6;
+    --nhs-aqua-green: #00A499;
+    --nhs-white: #FFFFFF;
+    --nhs-pale-grey: #F0F4F5;
+    --nhs-light-grey: #D8DDE0;
+    --nhs-mid-grey: #768692;
+    --nhs-dark-grey: #425563;
+    --nhs-black: #212B32;
+    --nhs-green: #007F3B;
+    --nhs-red: #DA291C;
+    --nhs-warm-yellow: #FFB81C;
+    --nhs-purple: #330072;
+}
+
+/* Constrain main content width */
+.block-container {
+    max-width: 800px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* Global font */
+html, body, [class*="css"] {
+    font-family: "Inter", Arial, sans-serif !important;
+    color: var(--nhs-black);
+}
+
+/* Main header styling */
+h1 {
+    color: var(--nhs-dark-blue) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+h2, h3 {
+    color: var(--nhs-blue) !important;
+    font-weight: 600 !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: var(--nhs-dark-blue) !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: var(--nhs-white) !important;
+}
+
+[data-testid="stSidebar"] .stRadio label,
+[data-testid="stSidebar"] .stSelectbox label {
+    color: var(--nhs-white) !important;
+}
+
+/* NHS-style buttons */
+.stButton > button {
+    background-color: var(--nhs-green) !important;
+    color: var(--nhs-white) !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    padding: 12px 20px !important;
+    box-shadow: 0 4px 0 #005a2b !important;
+    transition: background-color 0.15s ease;
+}
+
+.stButton > button:hover {
+    background-color: #005a2b !important;
+}
+
+.stButton > button:active {
+    box-shadow: none !important;
+    transform: translateY(4px);
+}
+
+/* Primary button override */
+.stButton > button[kind="primary"] {
+    background-color: var(--nhs-green) !important;
+}
+
+/* Download buttons */
+.stDownloadButton > button {
+    background-color: var(--nhs-blue) !important;
+    color: var(--nhs-white) !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 0 var(--nhs-dark-blue) !important;
+}
+
+.stDownloadButton > button:hover {
+    background-color: var(--nhs-dark-blue) !important;
+}
+
+/* Metrics */
+[data-testid="stMetric"] {
+    background-color: var(--nhs-pale-grey);
+    border-left: 4px solid var(--nhs-blue);
+    padding: 12px 16px;
+    border-radius: 4px;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--nhs-dark-grey) !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--nhs-dark-blue) !important;
+    font-weight: 700 !important;
+}
+
+/* Expanders */
+.streamlit-expanderHeader {
+    background-color: var(--nhs-pale-grey) !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    color: var(--nhs-black) !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0px;
+    border-bottom: 3px solid var(--nhs-light-grey);
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 0 !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    color: var(--nhs-dark-grey) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--nhs-white) !important;
+    border-bottom: 3px solid var(--nhs-blue) !important;
+    color: var(--nhs-blue) !important;
+}
+
+/* Data editor / dataframe */
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--nhs-light-grey);
+    border-radius: 4px;
+}
+
+/* Success/info/warning/error alerts — NHS style */
+.stAlert {
+    border-radius: 4px !important;
+    border-left-width: 4px !important;
+}
+
+/* Progress bar */
+.stProgress > div > div {
+    background-color: var(--nhs-blue) !important;
+}
+
+/* Dividers */
+hr {
+    border-color: var(--nhs-light-grey) !important;
+}
+
+/* Selectbox / inputs */
+.stSelectbox [data-baseweb="select"] > div,
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    border-color: var(--nhs-mid-grey) !important;
+    border-radius: 4px !important;
+    border-width: 2px !important;
+}
+
+.stSelectbox [data-baseweb="select"] > div:focus-within,
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--nhs-blue) !important;
+    box-shadow: 0 0 0 3px rgba(0, 94, 184, 0.2) !important;
+}
+
+/* Checkbox */
+.stCheckbox label span[data-testid="stCheckboxLabel"] {
+    font-weight: 400;
+}
+
+/* Slider */
+.stSlider [data-testid="stThumbValue"] {
+    color: var(--nhs-blue) !important;
+}
