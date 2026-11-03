@@ -2,6 +2,8 @@
 
 A tool for understanding which healthcare communication will be most effective using LLM-simulated patient panels. It generates synthetic patients with realistic demographic and behavioural profiles, sends them healthcare messages via an LLM, and evaluates which messages lead to the most people responding with desired behaviour. This is a proof-of-concept, as yet unfinished tool, which is in the process of being tested and does not reflect NHS England policy or processes. 
 
+**This project is a work in progress. All data is synthetic.**
+
 ## How It Works
 
 1. **Generate patients** — Synthetic patients are sampled from configurable demographic and behavioural distributions (age, gender, ethnicity, deprivation, health engagement, trust, etc.).
